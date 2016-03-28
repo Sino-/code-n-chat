@@ -1,0 +1,14 @@
+{
+	
+	"application": {
+		"port": 1337
+	},
+	
+	"database": {
+		"db_host": "localhost",
+		"db_user": "root",
+		"db_pass": "",
+		"db_name": "code_n_chat"
+	}
+
+}

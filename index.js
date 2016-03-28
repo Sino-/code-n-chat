@@ -1,26 +1,30 @@
 var path = require('path');
 var express = require('express');
 var app = express();
+var config = require('./models/CONFIGS');
+var system = require('./models/System.js');
 
+// defining views dir
 app.set('views', path.join(__dirname, 'views'));
+
+// defining assets dir
 app.use(express.static(path.join(__dirname, 'assets')));
+
+// defining views engine
+app.set('view engine', 'jade');
 
 
 
 app.get('/', function(req, res) {
 	console.log("Client connected...");
-	res.send('Hello World');
+	//res.render('index', { message: "welcome to code-n-chat"});
+	res.send(system());
+
 });
 
 
-app.get('/name/:name', function(req, res) {
-	console.log("Name Endpoint accessed...");
-	res.send('My name is '+ req.params.name +' '+ req.query.lastname);
-});
 
-
-app.listen(1337, app_init);
-
-function app_init() {
+// init server
+app.listen(config.application.port, function() {
 	console.log("Listening on port 1337");
-}
+});

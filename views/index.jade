@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+	head
+		title= "code-n-chat"
+
+		link(href="/css/materialize.min.css" type="text/css" rel="stylesheet")
+		link(href="/css/style.css" type="text/css" rel="stylesheet")
+			
+	body
+		h1= message
+		textarea(id="code_input" name="code_input" rows="50" cols="100")
+		br
+		button(id="save_code" type="submit")= "save code"
+
+		script(type="text/javascript" href="/js/jquery.min.js")
+		script(type="text/javascript" href="/js/materialize.min.js")
+		script(type="text/javascript" href="/js/main.js")
