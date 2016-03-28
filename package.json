@@ -1,0 +1,21 @@
+{
+  "name": "code-n-chat",
+  "version": "0.0.0",
+  "description": "### TODO - allow user to write code - save code in realtime - allow user to share link to code - allow user to send chat messages - allow other users to make edits to same page - allow users to download code - build ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Sino-/code-n-chat.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Sino-/code-n-chat/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.4"
+  }
+}
