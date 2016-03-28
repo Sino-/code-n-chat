@@ -1,5 +1,8 @@
 var path = require('path');
 var express = require('express');
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
 var app = express();
 var config = require('./models/CONFIGS');
 var system = require('./models/System.js');
@@ -17,12 +20,14 @@ app.set('view engine', 'jade');
 
 app.get('/', function(req, res) {
 	console.log("Client connected...");
-	//res.render('index', { message: "welcome to code-n-chat"});
+	res.render('index', { message: "welcome to code-n-chat"});
 	res.send(system());
 
 });
 
-
+io.on('connection', function(socket){
+  console.log('a user connected');
+});
 
 // init server
 app.listen(config.application.port, function() {
