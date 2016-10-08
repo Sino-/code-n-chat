@@ -1,1 +1,1 @@
-forever --watch --watchDirectory ../code-n-chat app.js
+forever --watch --watchDirectory ../code-n-chat index.js
